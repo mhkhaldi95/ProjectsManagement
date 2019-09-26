@@ -213,6 +213,9 @@
         $(document).ready(function(){
 
                 $(document).on("click",'.editp',function () {
+                    $(document).on("click",'.editp',function (event) {
+                        x=event;
+                        target = $(x.target).parent().parent().parent();
             d=$(this).data('value');
 
         })
@@ -278,8 +281,19 @@
                         else {
                           
                             $('#editproject').modal("hide");
-                            location.reload();
-
+                            var ro = '<tr id="tr_'+data.data.id+'">\n' +
+                                '<th scope="row">'+data.data.id+'</th>\n' +
+                                '<td>'+data.data.name+'</td>\n' +
+                                '                    <td>'+data.data.program_type+'</td>\n' +
+                                '\n' +
+                                '<td>\n' +
+                                '<a data-value="'+data.data.id+'" id="delete" class="delete-post-link remove-project"> <i class="fa fa-trash" aria-hidden="true"></i></a>\n' +
+                                '<a data-value="'+data.data.id+'" class="editp" data-toggle="modal" data-target="#editproject" href=""><i class="fa fa-edit" aria-hidden="true"></i></a>\n' +
+                                '<a href="/download/'+data.data.filename+'" >\n' +
+                                '<i class="fa fa-download" aria-hidden="true"></i></a>\n' +
+                                '</td>\n' +
+                                '</tr>';
+                            target.replaceWith(ro);
 
                         }
                     }
