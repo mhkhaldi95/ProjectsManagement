@@ -1,0 +1,34 @@
+routes
+/reg 
+تسجيل حساب جديد 
+/std/index
+ أول صفحة عند الطالب يوجد فيها المشاريع المقترحة  
+/std/info
+بيانات الطالب الشخصية
+Route::get('/std/project','StudentApiController@std_project');
+تحتوي على بيانات المشروع وتفاصيله أسماء المجموعة والمناقشين وموعد المناقشة
+Route::get('/std/delete/project','StudentApiController@delete_project_std');
+حدف مشروع الطالب
+Route::post('/std/store/project','StudentApiController@store_project_std');
+انشاء مشروع الطالب
+Route::post('/std/update/project','StudentApiController@update_project_std');
+تحديث المشروع
+Route::get('/add/std_to_project/view','StudentApiController@add_std_to_project_view');
+تحتوي على الطلاب الذين ليس لديهم مشروع وانت تختار منهم لاضافتهم لمشروع
+Route::post('/add/std/to_project','StudentApiController@add_std_to_project');
+اضافة الطلاب
+//-----------------------------------Teacher-----------------------------------------------------------
+Route::get('/teacher/index','TeacherApiController@te_index');
+أول صفحة عند المعلم وتحتوي على المشاريع المقترحة
+Route::get('/teacher/info','TeacherApiController@te_info');
+المعلومات الشخصية للمعلم
+Route::get('/teacher/myproject','TeacherApiController@myproject');
+مشاريع المعلم التي وافق عليها ليكون لها مناقش
+Route::get('/teacher/projectsneeded','TeacherApiController@projectsneeded');
+المشاريع التي لم يوافق عليها بعد او لم يختارها لمناقشتها
+Route::get('/teacher/projects','TeacherApiController@te_projects');
+كل المشاريع بما فيها التي تمت الموافق عليها 
+Route::get('/add/project/teacher/{id}','TeacherApiController@add_project_teacher');
+اضافة مشروع للمعلم ليكون له كمناقش
+Route::get('/delete/project/teacher/{id}','TeacherApiController@delete_project_teahcer');
+حذف المشروع من قائمة مشاريع المعلم التي وافق عليها

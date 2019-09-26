@@ -1,0 +1,23 @@
+<?php
+return [
+    'Student menu'=>'قائمة الطالب',
+    'welcome'=>'مرحبا',
+    'Language'=>'اللغة',
+    'logout'=>'خروج',
+    'Advertisements'=>'الإعلانات',
+    'Home'=>'الرئيسية',
+    'my info'=>'المعلومات الشخصية',
+    'my project'=>'مشروع الطالب',
+    'Student Information'=>'بيانات الطالب',
+    'type account'=>'نوغ الحساب',
+    'University ID'=>'الرقم الجامعي',
+    'Name'=>'الاسم',
+    'Specialization'=>'التخصص',
+    'level'=>'المستوى',
+    'Arabic'=>'عربي',
+    'English'=>'انجليزي',
+    'Email'=>'الايميل',
+    'Phone No'=>'رقم الهاتف',
+    'no project'=>'ليس لديك مشروع',
+    ''=>'',
+];
