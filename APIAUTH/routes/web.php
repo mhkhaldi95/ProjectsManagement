@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Storage;
 Route::get('/', function () {
     return view('index');
 });
+//test
 
 Auth::routes();
 
