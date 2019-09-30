@@ -170,9 +170,6 @@
 @section('script')
     <script>
         $(document).on("click",'.remove-project',function(){
-
-
-
             var id=$(this).data('value');
 
             swal({
@@ -197,9 +194,6 @@
                             if(count == 2){
                                 location.reload();
                             }
-
-
-
                         }
 
                     })
@@ -208,23 +202,23 @@
                     swal("Your imaginary file is safe!");
                 }
             });
-        })
-        var d;
-        $(document).ready(function(){
+        });
 
-                $(document).on("click",'.editp',function () {
+        $(document).ready(function(){
+            var d;
+
                     $(document).on("click",'.editp',function (event) {
                         x=event;
                         target = $(x.target).parent().parent().parent();
             d=$(this).data('value');
 
-        })
+
+
+                });
+
             $('#ad').on('submit', function(event){
 
                 event.preventDefault();
-
-
-
                 $.ajax({
                     url: "/admin/add/projects",
                     method:"POST",
@@ -250,8 +244,6 @@
                                 '<i class="fa fa-download" aria-hidden="true"></i></a>\n' +
                                 '</td>\n' +
                                 '</tr>';
-
-
                             $('#addproject').modal("hide");
                             $('#table tbody').append
                             (ro);
@@ -265,7 +257,7 @@
             $('#edit').on('submit', function(event){
 
                 event.preventDefault();
-                alert(d);
+
                 $.ajax({
                     url: "/admin/update/project/"+d,
                     method:"POST",
@@ -302,6 +294,7 @@
             });
 
         });
+
 </script>
 
 

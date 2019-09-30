@@ -49,8 +49,7 @@
 
 
             <button type="submit" class="btn btn-primary" name="update">تحديث المشروع</button>
-{{--                <a class="btn btn-primary" href="/std/delete/project">حذف المشروع</a>--}}
-                <button class="btn btn-lg btn-warning sweet-13" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'Warning']);">Warning</button>
+                <a class="btn btn-primary" href="/std/delete/project">حذف المشروع</a>
         </form>
 
 {{--        <h1 class="mt-4">ليس لديك مشاريع لتعديلها </h1>--}}
