@@ -26,10 +26,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
+
         app()->singleton('lang',function(){
             if(session()->has('lang'))
                 return session()->get('lang');
-            Schema::defaultStringLength(191);
         });
 
 
